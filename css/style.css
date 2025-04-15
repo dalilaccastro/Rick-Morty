@@ -1,0 +1,237 @@
+/* Fundo e corpo */
+body {
+  background-image: url('../assets/img/FUNDO_3.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: top center;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4); /* escurece o fundo */
+  z-index: -1;
+}
+
+
+/* Cartões */
+.card {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px #38f9d7;
+  border: 2px solid #38f9d7;
+}
+
+/* Título e texto */
+.card-title, .card-text {
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Botões personalizados */
+.btn-rickmorty {
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+  color: #0f0f0f;
+  font-weight: bold;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(67, 233, 123, 0.4);
+  font-size: 1rem;
+}
+
+.btn-rickmorty:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(56, 249, 215, 0.6);
+  color: #000;
+}
+
+.btn:hover,
+.btn-bounce:hover {
+  animation: bounce 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.btn-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  transform: skewX(-20deg);
+  animation: shine 1.5s infinite;
+}
+
+/* Badges de status */
+.status-badge {
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-size: 0.85em;
+  transition: background-color 0.3s ease;
+}
+
+.status-badge.alive {
+  background-color: #28d17b;
+  color: white;
+}
+
+.status-badge.dead {
+  background-color: #e44e4e;
+  color: white;
+}
+
+.status-badge.unknown {
+  background-color: #7f8c8d;
+  color: white;
+}
+
+/* Rodapé */
+.footer {
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+  color: #000;
+  text-align: center;
+  padding: 1rem;
+  font-weight: bold;
+  box-shadow: 0 -4px 8px rgba(56, 249, 215, 0.4);
+}
+
+.footer-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+
+/* Animações */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px #43e97b, 0 0 10px #38f9d7;
+  }
+  50% {
+    box-shadow: 0 0 20px #43e97b, 0 0 40px #38f9d7;
+  }
+  100% {
+    box-shadow: 0 0 5px #43e97b, 0 0 10px #38f9d7;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #000;
+  font-family: monospace;
+  animation: typing 3s steps(30, end), blink 0.7s step-end infinite;
+  max-width: 100%;
+}
+
+@keyframes shine {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: 1.5rem;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+}
