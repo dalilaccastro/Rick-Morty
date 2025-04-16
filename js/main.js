@@ -50,7 +50,7 @@ const renderCharacters = (characters) => {
                 <strong>Local Atual:</strong> ${character.location.name}
               </p>
               <div class="d-flex justify-content-center mt-3">
-                <a href="character.html?id=${character.id}" class="btn btn-rickmorty btn-glow">Ver Detalhes</a>
+                <a href="#" class="btn btn-rickmorty" onclick="openCharacterModal(${character.id})">Ver Detalhes</a>
               </div>
             </div>
           </div>
@@ -117,4 +117,38 @@ const updateFooterStats = async () => {
   };
   
   updateFooterStats();
+
+  // Modal
+  const openCharacterModal = async (id) => {
+    try {
+      const res = await fetch(`https://rickandmortyapi.com/api/character/${id}`);
+      const character = await res.json();
+  
+      document.getElementById("modal-character-name").textContent = character.name;
+      document.getElementById("modal-character-img").src = character.image;
+      document.getElementById("modal-character-img").alt = character.name;
+      document.getElementById("modal-character-status").textContent = character.status;
+      document.getElementById("modal-character-species").textContent = character.species;
+      document.getElementById("modal-character-gender").textContent = character.gender;
+      document.getElementById("modal-character-origin").textContent = character.origin.name;
+      document.getElementById("modal-character-location").textContent = character.location.name;
+  
+      const modal = document.getElementById("character-modal");
+      modal.classList.add("show");
+      modal.style.display = "block";
+      document.body.classList.add("modal-open");
+      document.body.insertAdjacentHTML("beforeend", '<div class="modal-backdrop fade show"></div>');
+    } catch (error) {
+      console.error("Erro ao abrir modal:", error);
+    }
+  };
+  
+  const closeModal = () => {
+    const modal = document.getElementById("character-modal");
+    modal.classList.remove("show");
+    modal.style.display = "none";
+    document.body.classList.remove("modal-open");
+    const backdrop = document.querySelector(".modal-backdrop");
+    if (backdrop) backdrop.remove();
+  };
   
