@@ -1,6 +1,6 @@
 # 💫 Projeto Rick and Morty - Bootcamp Growdev
 
-Este é um projeto desenvolvido como desafio final do módulo de **HTML, CSS, JavaScript e Bootstrap** do Bootcamp da [Growdev](https://www.growdev.com.br/). A aplicação consome a API oficial do [Rick and Morty](https://rickandmortyapi.com/) e exibe os personagens em uma interface estilizada, com filtros, animações e detalhes individuais.
+Este é um projeto desenvolvido como desafio do Bootcamp da [Growdev](https://www.growdev.com.br/) com **HTML, CSS, JavaScript e Bootstrap**. A aplicação consome a API oficial do [Rick and Morty](https://rickandmortyapi.com/) e exibe os personagens em uma interface estilizada, com filtros, animações e detalhes individuais.
 
 ---
 
@@ -9,42 +9,40 @@ Este é um projeto desenvolvido como desafio final do módulo de **HTML, CSS, Ja
 - HTML5
 - CSS3
 - JavaScript (ES6+)
-- [Bootstrap 5](https://getbootstrap.com/)
-- API pública [Rick and Morty](https://rickandmortyapi.com/)
+- Bootstrap 5
+- [Rick and Morty API](https://rickandmortyapi.com/)
 
 ---
 
 ## ✨ Funcionalidades
 
-- ✅ Listagem de personagens com:
-  - Imagem
-  - Nome
-  - Status (com cor visual)
-  - Espécie, Gênero, Origem e Localização Atual
-- ✅ Página de detalhes do personagem
-- ✅ Paginação funcional
-- ✅ Filtro por nome e por status
-- ✅ Animações CSS personalizadas (hover, brilho, entrada, botão)
-- ✅ Layout adaptado à proposta da **tela 3** do protótipo fornecido
-- ✅ Responsividade total
-- ✅ Footer com contagem de personagens, localizações e episódios
+- ✅ Listagem de personagens com nome, imagem, status, espécie e localização
+- ✅ Filtro por nome e status
+- ✅ Paginação com 6 personagens por página (2 linhas de 3 cards)
+- ✅ Página de detalhes completa de cada personagem
+- ✅ Contadores de personagens, episódios e localizações
+- ✅ Layout responsivo e com animações CSS
 
 ---
 
 ## 📸 Capturas de tela
 
-### Página de listagem:
+<p align="center">
+  <img src="./assets/img/rick-morty-tela1.png" width="45%" style="margin-right: 10px;" alt="Página Inicial - Rick and Morty" />
 
-![Listagem](./assets/img/listagem-preview.jpg)
-
-### Página de detalhes:
-
-![Detalhes](./assets/img/detalhes-preview.jpg)
+  <img src="./assets/img/rick-morty-modal.png" width="45%" alt="Página de Detalhes do Personagem" />
+</p>
 
 ---
 
 ## 🚀 Como rodar o projeto
 
-1. Clone este repositório:
-```bash
+- Clone este repositório:
 git clone https://github.com/dalilaccastro/Rick-Morty.git
+
+- Acesse a pasta do projeto
+cd Rick-Morty
+
+- Abra o arquivo index.html em seu navegador
+
+---
