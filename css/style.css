@@ -1,14 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.pagination {
+  
+  background-color: rgba(0, 0, 0, 0.05); /* Fundo com transparência */
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.pagination a {
+  color: #4c9c4a; /* Cor dos números */
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  background-color: rgba(3, 90, 8, 0.8); /* Fundo dos botões */
+  margin: 0 4px;
+  border-radius: 6px;
+  border-color: rgba(3, 90, 8, 0.8);
+}
+
+.pagination a:hover {
+  background-color: rgba(8, 243, 24, 0.794); /* Cor de fundo ao passar o mouse */
+  color: black;
+}
+
 /* Fundo e corpo */
 body {
-  background-image: url('../assets/img/FUNDO_3.jpg');
+  background-image: url('../assets/img/FUNDO.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: top center;
-  color: #000;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #4c9c4a;
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
   margin: 0;
-  padding: 0;
+  padding: 0;  
 }
 
 html, body {
@@ -75,7 +105,7 @@ body.modal-open {
 
 /* Botões personalizados */
 .btn-rickmorty {
-  background: linear-gradient(135deg, #43e97b, #38f9d7);
+  background: linear-gradient(135deg, #4c9c4a, #38f9d7);
   color: #0f0f0f;
   font-weight: bold;
   border: none;
@@ -129,7 +159,7 @@ body.modal-open {
 }
 
 .status-badge.alive {
-  background-color: #28d17b;
+  background-color: #4c9c4a;
   color: white;
 }
 
@@ -145,16 +175,17 @@ body.modal-open {
 
 /* Rodapé */
 .footer {
-  background: linear-gradient(135deg, #43e97b, #38f9d7);
+  background: #4c9c4a;;
   color: #000;
   text-align: center;
   padding: 1rem;
   font-weight: bold;
-  box-shadow: 0 -4px 8px rgba(56, 249, 215, 0.4);
+  
 }
 
 .footer-container {
-  max-width: 900px;
+  max-width: 1000px;
+  min-height: 150px;
   margin: 0 auto;
   padding: 1rem;
 }
@@ -172,13 +203,13 @@ body.modal-open {
 
 @keyframes glow {
   0% {
-    box-shadow: 0 0 5px #43e97b, 0 0 10px #38f9d7;
+    box-shadow: 0 0 5px #4c9c4a, 0 0 10px #38f9d7;
   }
   50% {
-    box-shadow: 0 0 20px #43e97b, 0 0 40px #38f9d7;
+    box-shadow: 0 0 20px #4c9c4a, 0 0 40px #38f9d7;
   }
   100% {
-    box-shadow: 0 0 5px #43e97b, 0 0 10px #38f9d7;
+    box-shadow: 0 0 5px #4c9c4a, 0 0 10px #38f9d7;
   }
 }
 
