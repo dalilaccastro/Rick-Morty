@@ -34,6 +34,12 @@ Este é um projeto desenvolvido como desafio do Bootcamp da [Growdev](https://ww
 </p>
 
 ---
+## 🔗 Acesse o Projeto Online
+
+Confira a versão publicada no GitHub Pages:  
+👉 [Rick and Morty Explorer - GitHub Pages](https://dalilaccastro.github.io/Rick-Morty/)
+
+---
 
 ## 🚀 Como rodar o projeto
 
