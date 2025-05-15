@@ -4,38 +4,15 @@
     box-sizing: border-box;
 }
 
-.pagination {
-  
-  background-color: rgba(0, 0, 0, 0.05); /* Fundo com transparência */
-  padding: 10px;
-  border-radius: 8px;
-}
-
-.pagination a {
-  color: #4c9c4a; /* Cor dos números */
-  float: left;
-  padding: 8px 16px;
-  text-decoration: none;
-  transition: background-color 0.3s;
-  background-color: rgba(3, 90, 8, 0.8); /* Fundo dos botões */
-  margin: 0 4px;
-  border-radius: 6px;
-  border-color: rgba(3, 90, 8, 0.8);
-}
-
-.pagination a:hover {
-  background-color: rgba(8, 243, 24, 0.794); /* Cor de fundo ao passar o mouse */
-  color: black;
-}
 
 /* Fundo e corpo */
 body {
   background-image: url('../assets/img/FUNDO.jpg');
-  background-size: cover;
+  background-size:cover;
   background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: top center;
-  background-color: #4c9c4a;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
   font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
   margin: 0;
   padding: 0;  
@@ -173,6 +150,31 @@ body.modal-open {
   color: white;
 }
 
+/* Paginação */
+.pagination {
+  
+  background-color: rgba(0, 0, 0, 0.05); /* Fundo com transparência */
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.pagination a {
+  color: #4c9c4a; /* Cor dos números */
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  background-color: rgba(3, 90, 8, 0.8); /* Fundo dos botões */
+  margin: 0 4px;
+  border-radius: 6px;
+  border-color: rgba(3, 90, 8, 0.8);
+}
+
+.pagination a:hover {
+  background-color: rgba(8, 243, 24, 0.794); /* Cor de fundo ao passar o mouse */
+  color: black;
+}
+
 /* Rodapé */
 .footer {
   background: #4c9c4a;;
@@ -184,10 +186,9 @@ body.modal-open {
 }
 
 .footer-container {
-  max-width: 1000px;
-  min-height: 150px;
+  max-width: 1200px;
+  min-height: 20px;
   margin: 0 auto;
-  padding: 1rem;
 }
 
 
@@ -262,7 +263,10 @@ body.modal-open {
 /* Responsividade */
 @media (max-width: 768px) {
   .card {
-    margin-bottom: 1.5rem;
+    width: 100%;
+    margin: 10px 0;
+    margin-bottom: 10px;
+    margin-left: 10px;
   }
 
   .card-body {
